@@ -13,6 +13,7 @@ gem 'twitter-bootstrap-rails'
 gem 'devise-bootstrap-views'
 gem 'jquery-rails'
 gem 'commonjs'
+gem 'stock_quote'
 
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'
