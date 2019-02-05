@@ -14,6 +14,7 @@ gem 'devise-bootstrap-views'
 gem 'jquery-rails'
 gem 'commonjs'
 gem 'stock_quote', '~>2.0.0'
+gem 'hirb', '~> 0.7.3'
 
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'
