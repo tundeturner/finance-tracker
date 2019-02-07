@@ -19,8 +19,8 @@
         <td><%= user_stock.ticker %></td>
         <td><%= user_stock.last_price %></td>
         <td><%= user_stock.previous_close %></td>
-        <td><%= number_to_percentage (user_stock.change_percent*100)  %></td>
-        <td><%= number_to_percentage user_stock.ytd_change_percent * 100 %></td>
+        <td><%= number_to_percentage user_stock.change_percent*100, precision: 1  %></td>
+        <td><%= number_to_percentage user_stock.ytd_change_percent * 100, precision: 1 %></td>
         <% if @user.id == current_user.id %>
           <td><%= link_to "Delete", user_stock_path(user_stock), class: "btn btn-xs btn-danger", method: :delete, data: {confirm: "Are you sure?"} %></td>
         <% end %>
