@@ -12,4 +12,9 @@ class StocksController < ApplicationController
     end
   end
 
+  def update
+    Stock.refresh_all_prices
+    redirect_to my_portfolio_path
+  end
+
 end

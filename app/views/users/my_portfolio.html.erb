@@ -1,4 +1,6 @@
 <h1>My Portfolio</h1>
+Last updated: <%= time_ago_in_words @user_stocks.first.updated_at %>
+<%= link_to "Update All", price_update_path, class: "btn btn-xs btn-success" %><br/>
 
 <h3>Search for stocks</h3>
 <div id="stock-lookup">

@@ -15,4 +15,14 @@ class Stock < ApplicationRecord
     where(ticker: ticker_symbol).first
   end
 
+  def self.refresh_all_prices
+    all.each do |s|
+      looked_up_stock = StockQuote::Stock.quote(s.ticker)
+      s.last_price = looked_up_stock.latest_price
+      s.previous_close = looked_up_stock.previous_close
+      s.change_percent = looked_up_stock.change_percent
+      s.ytd_change_percent = looked_up_stock.ytd_change
+      s.save
+    end
+  end
 end
